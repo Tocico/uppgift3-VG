@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uppgift6</title>
+</head>
+<body>
+    <div id ='factorial'></div>
+
+    <script>
+        
+        
+       function factorial(n){ 
+         
+         let fac = 1;  // börja alltid med talet 1 för att multiplicera
+         for(let i = 1; i <= n; i++){ 
+             fac *= i; // Beräknar fakulteten
+         }
+          return fac;
+       } 
+       let n = 5; 
+       document.getElementById('factorial').innerHTML = `${n} fakultet är ${factorial(n)}`; //Visa i webbsidan
+
+
+        
+    </script>
+    
+</body>
+</html>
