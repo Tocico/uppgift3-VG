@@ -1,7 +1,7 @@
 
   
 
-    function randomDice(){
+    function randomDice(){ // Funktion som skapar 1000 slumpmässiga tal
         
         let randomArray = new Array(1000); // Skapat array som har 1000 utrymmet
     
@@ -18,7 +18,7 @@
     
     console.log('------------Frekvenstabell---------------');
     
-    function print(){ 
+    function print(){  // Funktion som skriver ut antal av varje tal
         
         let randomArray = randomDice(); // Anrop randomArray från randomDice()
 

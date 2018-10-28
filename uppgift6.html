@@ -16,9 +16,10 @@
          for(let i = 1; i <= n; i++){ 
              fac *= i; // Beräknar fakulteten
          }
-          return fac;
+          return fac; 
        } 
-       let n = 5; 
+       let n = prompt('Skriv ett valfritt heltal mellan 1 och 1000');
+       
        document.getElementById('factorial').innerHTML = `${n} fakultet är ${factorial(n)}`; //Visa i webbsidan
 
 
