@@ -2,26 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Uppgift6</title>
+    <title>Uppgift3-6</title>
 </head>
 <body>
     <div id ='factorial'></div>
+    
 
     <script>
         
-        
-       function factorial(n){ 
-         
-         let fac = 1;  // börja alltid med talet 1 för att multiplicera
-         for(let i = 1; i <= n; i++){ 
-             fac *= i; // Beräknar fakulteten
-         }
-          return fac; 
-       } 
-       let n = prompt('Skriv ett valfritt heltal mellan 1 och 1000');
-       
-       document.getElementById('factorial').innerHTML = `${n} fakultet är ${factorial(n)}`; //Visa i webbsidan
+  while(true){
+     let n = prompt('Skriv ett valfritt heltal mellan 1 och 1000');
 
+      if(n === null){ 
+          break;
+      }
+      if(n < 1 || n > 1000 || n === '' || isNaN(n)){
+       alert('Skriv ett heltal större än noll');
+        continue;
+      }
+      
+      else{
+          function factorial(n){
+              let fac = 1; // börja räkna med talet 1 
+              for(let i = 1; i <= n; i++){
+                  fac *= i; // Medan loopar beräknar det fakulteten
+                  if(fac === Infinity){ // Hantera infinity. 
+                    alert(`Infinity! Det finns gränsen att mata in`); 
+                      break;
+                  }
+                  
+                }
+                return fac;
+            }
+                
+
+        } 
+       
+
+       document.getElementById('factorial').innerHTML = `${n} fakultet är ${factorial(n)}`; //Visa i webbläsare
+       break;
+    }
 
         
     </script>
